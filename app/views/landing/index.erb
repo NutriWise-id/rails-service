@@ -1,10 +1,38 @@
-<section class="flex flex-col ">
+<section class="flex flex-col">
 
-  <div class="animate-in slide-in-from-top-96 fade-in-0 duration-2s mt-24 mb-40">
-    <%= image_tag "nutriwiselogo.png" %>
+  <div class="mt-24 mb-40 lg:mb-96 lg:grid lg:grid-cols-3 lg:mt-0">
+    <div>
+      <%= image_tag "nutriwiselogo.png", class: "animate-in slide-in-from-top-96 fade-in-0 duration-2s lg:w-56 lg:h-56" %>
+      <div class="hidden lg:block">
+        <p class="animate-in slide-in-from-left-96 fade-in-0 duration-2s text-mainColor2 font-poppins xl:text-xl 2xl:text-2xl">NutriWise
+          is a
+          mobile application that scans food to provide detailed
+          nutritional
+          information and health
+          benefits. Designed to combat child stunting, it helps users make informed dietary choices by leveraging
+          AI-powered food recognition, real-time data, and user friendly tools to promote better nutrition and healthier
+          lives.</p>
+        <div class="lg:flex lg:pt-4 lg:pb-4 lg:mt-28">
+          <%= link_to "Learn More", new_session_path, class: "animate-in slide-in-from-bottom-96 fade-in-0 duration-2s p-4 text-white bg-mainColor2 rounded-3xl w-60 text-center" %>
+        </div>
+      </div>
+    </div>
+    <div class="hidden lg:block lg:col-span-2">
+      <div class="animate-in fade-in-0 duration-4s lg:flex lg:flex-row-reverse lg:mt-8 xl:text-2xl">
+        <%= link_to "Signup", new_session_url, class: "p-4 text-mainColor2 font-poppins font-bold" %>
+        <%= link_to "Contact", new_session_url, class: "p-4 text-mainColor2 font-poppins font-bold" %>
+        <%= link_to "Home", new_session_url, class: "p-4 text-mainColor2 font-poppins font-bold" %>
+        <%= link_to "About", new_session_url, class: "p-4 text-mainColor2 font-poppins font-bold" %>
+      </div>
+      <div>
+        <div class="animate-in fade-in-0 duration-4s bgImage">
+          <!--          <p>This is BG IMAGE</p>-->
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="onViewAnimate animate-in slide-in-from-left-14 fade-in-0 duration-2s ease-in-out rounded-md bg-mainColor2 mt-20">
+  <div class="onViewAnimate animate-in slide-in-from-left-14 fade-in-0 duration-2s ease-in-out rounded-lg bg-mainColor2 mt-20 lg:mt-48">
     <p class="font-poppins p-4 text-white">Di Indonesia, berdasarkan data Asian Development Bank, pada tahun 2022
       persentase
       Prevalence of
