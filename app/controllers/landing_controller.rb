@@ -3,10 +3,10 @@ class LandingController < ApplicationController
   allow_unauthenticated_access
 
   def index
-    payload = { data: 'test' }
+    payload = { data: "test" }
 
     # IMPORTANT: set nil as password parameter
-    token = JWT.encode(payload, nil, 'none')
+    token = JWT.encode(payload, nil, "none")
 
     # eyJhbGciOiJub25lIn0.eyJkYXRhIjoidGVzdCJ9.
     puts token

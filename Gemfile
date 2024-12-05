@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem 'dotenv', groups: [:development, :test]
+# Jwt for auth login
 gem "jwt"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.0"
@@ -57,7 +59,6 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-
 end
 
 group :test do

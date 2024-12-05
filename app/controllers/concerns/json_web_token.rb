@@ -16,4 +16,3 @@ module JsonWebToken
     HashWithIndifferentAccess.new decoded
   end
 end
-

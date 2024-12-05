@@ -8,11 +8,11 @@ class ApplicationController < ActionController::Base
   private
 
   def authenticate_request
-    token = request.headers['Authorization']&.split(' ')&.last
+    token = request.headers["Authorization"]&.split(" ")&.last
     if token.present?
       jwt_decode(token) # Pass the token for decoding
     else
-      render json: { error: 'Token is missing' }, status: :unauthorized
+      render json: { error: "Token is missing" }, status: :unauthorized
     end
   rescue JWT::DecodeError => e
     render json: { error: "Invalid token: #{e.message}" }, status: :unauthorized

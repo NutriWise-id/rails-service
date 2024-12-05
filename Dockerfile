@@ -39,6 +39,14 @@ RUN bundle install && \
     rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git && \
     bundle exec bootsnap precompile --gemfile
 
+# Install Node.js and npm
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
+    apt-get install -y nodejs
+
+# Install node dependencies
+COPY package.json package-lock.json ./
+RUN npm install --production --frozen-lockfile
+
 # Copy application code
 COPY . .
 
@@ -69,4 +77,4 @@ ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 # Start server via Thruster by default, this can be overwritten at runtime
 EXPOSE 8080
-CMD ["sh", "-c", "./bin/thrust", "./bin/rails", "server", "-b", "0.0.0.0", "-p", "8080"]
+CMD ["sh", "-c", "bundle exec bin/rails db:prepare && ./bin/thrust ./bin/rails server -b 0.0.0.0 -p 8080"]
