@@ -1,5 +1,10 @@
 <section class="flex flex-col">
 
+
+  <% if authenticated? %>
+    <p><%= @mysession %></p>
+  <% end %>
+
   <div class="mt-24 mb-40 lg:mb-96 lg:grid lg:grid-cols-3 lg:mt-0">
     <div>
       <%= image_tag "nutriwiselogo.png", class: "animate-in slide-in-from-top-96 fade-in-0 duration-2s lg:w-56 lg:h-56" %>
@@ -10,7 +15,8 @@
           nutritional
           information and health
           benefits. Designed to combat child stunting, it helps users make informed dietary choices by leveraging
-          AI-powered food recognition, real-time data, and user friendly tools to promote better nutrition and healthier
+          AI-powered food recognition, real-time data, and user friendly tools to promote better nutrition and
+          healthier
           lives.</p>
         <div class="lg:flex lg:pt-4 lg:pb-4 lg:mt-28">
           <%= link_to "Learn More", new_session_path, class: "animate-in slide-in-from-bottom-96 fade-in-0 duration-2s p-4 text-white bg-mainColor2 rounded-3xl w-60 text-center" %>
