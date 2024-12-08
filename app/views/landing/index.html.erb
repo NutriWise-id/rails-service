@@ -9,7 +9,7 @@
     <div>
       <%= image_tag "nutriwiselogo.png", class: "animate-in slide-in-from-top-96 fade-in-0 duration-2s lg:w-56 lg:h-56" %>
       <div class="hidden lg:block">
-        <p class="animate-in slide-in-from-left-96 fade-in-0 duration-2s text-mainColor2 font-poppins xl:text-xl 2xl:text-2xl">NutriWise
+        <p class="animate-in slide-in-from-left-96 fade-in-0 duration-2s text-mainColor2 font-poppins lg:text-lg xl:text-xl 2xl:text-2xl">NutriWise
           is a
           mobile application that scans food to provide detailed
           nutritional
@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="hidden lg:block lg:col-span-2">
-      <div class="animate-in fade-in-0 duration-4s lg:flex lg:flex-row-reverse lg:mt-8 xl:text-2xl">
+      <div class="animate-in fade-in-0 duration-4s lg:flex lg:flex-row-reverse lg:mt-8 lg:text-lg xl:text-2xl">
         <%= link_to "Signup", new_session_url, class: "p-4 text-mainColor2 font-poppins font-bold" %>
         <%= link_to "Contact", new_session_url, class: "p-4 text-mainColor2 font-poppins font-bold" %>
         <%= link_to "Home", new_session_url, class: "p-4 text-mainColor2 font-poppins font-bold" %>
@@ -38,43 +38,50 @@
     </div>
   </div>
 
-  <div class="onViewAnimate animate-in slide-in-from-left-14 fade-in-0 duration-2s ease-in-out rounded-lg bg-mainColor2 mt-20 lg:mt-48">
-    <p class="font-poppins p-4 text-white">Di Indonesia, berdasarkan data Asian Development Bank, pada tahun 2022
+  <div class="flex flex-col lg:grid lg:grid-cols-2 gap-4 mt-20 lg:mt-48">
+    <div class="flex flex-col justify-between bg-mainColor2 rounded-lg onViewAnimate animate-in slide-in-from-left-14 fade-in-0 duration-2s ease-in-out">
+      <p class="font-poppins p-4 text-white">Di Indonesia, berdasarkan data Asian Development Bank, pada tahun 2022
       persentase
       Prevalence of
       Stunting Among
       Children Under 5 Years of Age di Indonesia sebesar 31,8 persen. Jumlah tersebut, menyebabkan Indonesia berada
       pada
       urutan ke-10 di wilayah Asia Tenggara.</p>
-    <p class="font-poppins p-4 text-white text-end">
-      <cite>"Jesica Deviana"</cite>
-    </p>
+      <p class="font-poppins p-4 text-white text-end">
+        <cite>"Jesica Deviana"</cite>
+      </p>
+    </div>
+    <div class="flex flex-col justify-between bg-mainColor1 rounded-lg onViewAnimate animate-in slide-in-from-left-14 fade-in-0 duration-2s ease-in-out">
+      <p class="font-poppins p-4 text-white">Statistik PBB 2020 mencatat, lebih dari 149 juta (22%) balita di seluruh dunia mengalami stunting, dimana 6,3 juta merupakan anak usia dini atau balita stunting adalah balita Indonesia. Menurut UNICEF, stunting disebabkan anak kekurangan gizi dalam dua tahun usianya, ibu kekurangan nutrisi saat kehamilan, dan sanitasi yang buruk.</p>
+      <p class="font-poppins p-4 text-white text-end">
+        <cite>"PAUDPEDIA"</cite>
+      </p>
+    </div>
   </div>
 
-  <div class="onViewAnimate animate-in slide-in-from-left-14 fade-in-0 duration-2s ease-in-out mt-16 mb-24">
-    <%= image_tag "logo2.png" %>
-    <p class="font-poppins text-base text-center font-bold">BERSAMA NUTRIWISE, CEGAH STUNTING SEJAK DINI</p>
-  </div>
 
-  <hr>
+  <div class="lg:grid lg:grid-cols-2 gap-4">
 
-  <div class="onViewAnimate animate-in slide-in-from-left-14 fade-in-0 duration-2s ease-in-out mt-16 mb-24">
-    <%= image_tag "logo3.png" %>
-    <p class="font-poppins text-base text-center font-bold">DAPATKAN SARAN TERBAIK UNTUK MENCEGAH STUNTING</p>
-  </div>
+    <div class="onViewAnimate animate-in slide-in-from-left-14 fade-in-0 duration-2s ease-in-out mt-16 mb-24">
+      <%= image_tag "logo2.png" %>
+      <p class="font-poppins text-base text-center font-bold">BERSAMA NUTRIWISE, CEGAH STUNTING SEJAK DINI</p>
+    </div>
 
-  <hr>
+    <div class="onViewAnimate animate-in slide-in-from-right-14 fade-in-0 duration-2s ease-in-out mt-16 mb-24">
+      <%= image_tag "logo3.png" %>
+      <p class="font-poppins text-base text-center font-bold">DAPATKAN SARAN TERBAIK UNTUK MENCEGAH STUNTING</p>
+    </div>
 
-  <div class="onViewAnimate animate-in slide-in-from-left-14 fade-in-0 duration-2s ease-in-out mt-16 mb-24">
-    <%= image_tag "logo4.png" %>
-    <p class="font-poppins text-base text-center font-bold">SCAN FOTO UNTUK MENEMUKAN INFO GIZI MAKANAN</p>
-  </div>
+    <div class="onViewAnimate animate-in slide-in-from-left-14 fade-in-0 duration-2s ease-in-out mt-16 mb-24">
+      <%= image_tag "logo4.png" %>
+      <p class="font-poppins text-base text-center font-bold">SCAN FOTO UNTUK MENEMUKAN INFO GIZI MAKANAN</p>
+    </div>
 
-  <hr>
+    <div class="onViewAnimate animate-in slide-in-from-right-14 fade-in-0 duration-2s ease-in-out mt-16 mb-24">
+      <%= image_tag "logo5.png" %>
+      <p class="font-poppins text-base text-center font-bold">AYO MULAI UNTUK MENUJU INDONESIA EMAS</p>
+    </div>
 
-  <div class="onViewAnimate animate-in slide-in-from-left-14 fade-in-0 duration-2s ease-in-out mt-16 mb-24">
-    <%= image_tag "logo5.png" %>
-    <p class="font-poppins text-base text-center font-bold">AYO MULAI UNTUK MENUJU INDONESIA EMAS</p>
   </div>
 
   <div class="onViewAnimate animate-in slide-in-from-bottom-14 fade-in-0 duration-2s ease-in-out mt-16 mb-24">
