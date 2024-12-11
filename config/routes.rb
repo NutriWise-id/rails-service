@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resource :session
   resources :passwords, param: :token
-  resources :register, only: [ :new, :create ]
+  resources :register, only: [:new, :create]
+  get "user/profile/:id", to: "user#profile", as: "user_profile"
   post "auth/login", to: "login#login"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

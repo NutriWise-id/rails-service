@@ -1,0 +1,12 @@
+<div class="flex justify-start gap-4 items-center animate-in fade-in-0 duration-4s lg:flex lg:flex-row-reverse lg:mt-8 lg:text-lg xl:text-2xl round">
+  <% if authenticated? %>
+    <%= link_to user_profile_path(user) do %>
+      <%= image_tag "anonymous.jpg", class: "border border-black border-solid rounded-full max-w-12 transition-all hover:scale-105" %>
+    <% end %>
+  <% else %>
+    <%= link_to "Sign-in", new_session_path, class: "p-4 text-mainColor2 font-poppins font-bold transition-all hover:scale-125 hover:text-mainColor1" %>
+  <% end %>
+  <%= link_to "Contact", new_session_path, class: "p-4 text-mainColor2 font-poppins font-bold transition-all hover:scale-125 hover:text-mainColor1" %>
+  <%= link_to "About", new_session_path, class: "p-4 text-mainColor2 font-poppins font-bold transition-all hover:scale-125 hover:text-mainColor1" %>
+  <%= link_to "Home", new_session_path, class: "p-4 text-mainColor2 font-poppins font-bold transition-all hover:scale-125 hover:text-mainColor1" %>
+</div>

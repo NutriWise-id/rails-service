@@ -3,22 +3,13 @@ class LandingController < ApplicationController
   allow_unauthenticated_access
 
   def index
-    payload = { data: "test" }
 
-    # IMPORTANT: set nil as password parameter
-    token = JWT.encode(payload, nil, "none")
+    current_user = ""
 
-    # eyJhbGciOiJub25lIn0.eyJkYXRhIjoidGVzdCJ9.
-    puts token
+    if authenticated?
+      current_user = Current.user.email_address
+    end
 
-    # Set password to nil and validation to false otherwise this won't work
-    decoded_token = JWT.decode(token, nil, false)
-
-    # Array
-    # [
-    #   {"data"=>"test"}, # payload
-    #   {"alg"=>"none"} # header
-    # ]
-    puts decoded_token
+    @user = User.find_by(email_address: current_user)
   end
 end

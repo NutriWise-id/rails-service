@@ -1,35 +1,30 @@
+<%# if authenticated? %>
+<%#= Current.user.email_address %>
+<%# end %>
+
 <section class="flex flex-col">
-
-
-  <% if authenticated? %>
-    <p><%= @mysession %></p>
-  <% end %>
-
   <div class="mt-24 mb-40 lg:mb-96 lg:grid lg:grid-cols-3 lg:mt-0">
     <div>
       <%= image_tag "nutriwiselogo.png", class: "animate-in slide-in-from-top-96 fade-in-0 duration-2s lg:w-56 lg:h-56" %>
       <div class="hidden lg:block">
         <p class="animate-in slide-in-from-left-96 fade-in-0 duration-2s text-mainColor2 font-poppins lg:text-lg xl:text-xl 2xl:text-2xl">NutriWise
           is a
-          mobile application that scans food to provide detailed
+          mobile application that scans food to provid
+          <detailed></detailed>
           nutritional
           information and health
           benefits. Designed to combat child stunting, it helps users make informed dietary choices by leveraging
           AI-powered food recognition, real-time data, and user friendly tools to promote better nutrition and
           healthier
-          lives.</p>
+          lives.
+        </p>
         <div class="lg:flex lg:pt-4 lg:pb-4 lg:mt-28">
-          <%= link_to "Learn More", new_session_path, class: "animate-in slide-in-from-bottom-96 fade-in-0 duration-2s p-4 text-white bg-mainColor2 rounded-3xl w-60 text-center" %>
+          <%= link_to "Learn More", new_session_path, class: "animate-in slide-in-from-bottom-96 fade-in-0 duration-2s p-4 transition-all text-white bg-mainColor2 rounded-3xl w-60 text-center hover:scale-110 hover:bg-mainColor1" %>
         </div>
       </div>
     </div>
     <div class="hidden lg:block lg:col-span-2">
-      <div class="animate-in fade-in-0 duration-4s lg:flex lg:flex-row-reverse lg:mt-8 lg:text-lg xl:text-2xl">
-        <%= link_to "Signup", new_session_url, class: "p-4 text-mainColor2 font-poppins font-bold" %>
-        <%= link_to "Contact", new_session_url, class: "p-4 text-mainColor2 font-poppins font-bold" %>
-        <%= link_to "Home", new_session_url, class: "p-4 text-mainColor2 font-poppins font-bold" %>
-        <%= link_to "About", new_session_url, class: "p-4 text-mainColor2 font-poppins font-bold" %>
-      </div>
+      <%= render partial: "shared/navbar", locals: { user: @user } %>
       <div>
         <div class="animate-in fade-in-0 duration-4s bgImage">
           <!--          <p>This is BG IMAGE</p>-->
@@ -39,20 +34,23 @@
   </div>
 
   <div class="flex flex-col lg:grid lg:grid-cols-2 gap-4 mt-20 lg:mt-48">
-    <div class="flex flex-col justify-between bg-mainColor2 rounded-lg onViewAnimate animate-in slide-in-from-left-14 fade-in-0 duration-2s ease-in-out">
+    <div class="flex flex-col justify-between bg-mainColor2 rounded-lg onViewAnimate animate-in slide-in-from-left-14 fade-in-0 duration-2s ease-in-out transition-all hover:bg-mainColor1">
       <p class="font-poppins p-4 text-white">Di Indonesia, berdasarkan data Asian Development Bank, pada tahun 2022
-      persentase
-      Prevalence of
-      Stunting Among
-      Children Under 5 Years of Age di Indonesia sebesar 31,8 persen. Jumlah tersebut, menyebabkan Indonesia berada
-      pada
-      urutan ke-10 di wilayah Asia Tenggara.</p>
+        persentase
+        Prevalence of
+        Stunting Among
+        Children Under 5 Years of Age di Indonesia sebesar 31,8 persen. Jumlah tersebut, menyebabkan Indonesia berada
+        pada
+        urutan ke-10 di wilayah Asia Tenggara.</p>
       <p class="font-poppins p-4 text-white text-end">
         <cite>"Jesica Deviana"</cite>
       </p>
     </div>
-    <div class="flex flex-col justify-between bg-mainColor1 rounded-lg onViewAnimate animate-in slide-in-from-left-14 fade-in-0 duration-2s ease-in-out">
-      <p class="font-poppins p-4 text-white">Statistik PBB 2020 mencatat, lebih dari 149 juta (22%) balita di seluruh dunia mengalami stunting, dimana 6,3 juta merupakan anak usia dini atau balita stunting adalah balita Indonesia. Menurut UNICEF, stunting disebabkan anak kekurangan gizi dalam dua tahun usianya, ibu kekurangan nutrisi saat kehamilan, dan sanitasi yang buruk.</p>
+    <div class="flex flex-col justify-between bg-mainColor1 rounded-lg onViewAnimate animate-in slide-in-from-left-14 fade-in-0 duration-2s ease-in-out transition-all hover:bg-mainColor2">
+      <p class="font-poppins p-4 text-white">Statistik PBB 2020 mencatat, lebih dari 149 juta (22%) balita di seluruh
+        dunia mengalami stunting, dimana 6,3 juta merupakan anak usia dini atau balita stunting adalah balita Indonesia.
+        Menurut UNICEF, stunting disebabkan anak kekurangan gizi dalam dua tahun usianya, ibu kekurangan nutrisi saat
+        kehamilan, dan sanitasi yang buruk.</p>
       <p class="font-poppins p-4 text-white text-end">
         <cite>"PAUDPEDIA"</cite>
       </p>
@@ -64,29 +62,51 @@
 
     <div class="onViewAnimate animate-in slide-in-from-left-14 fade-in-0 duration-2s ease-in-out mt-16 mb-24">
       <%= image_tag "logo2.png" %>
-      <p class="font-poppins text-base text-center font-bold">BERSAMA NUTRIWISE, CEGAH STUNTING SEJAK DINI</p>
+      <p class="font-poppins text-base text-center font-bold lg:text-2xl">BERSAMA NUTRIWISE, CEGAH STUNTING SEJAK
+        DINI</p>
     </div>
 
     <div class="onViewAnimate animate-in slide-in-from-right-14 fade-in-0 duration-2s ease-in-out mt-16 mb-24">
       <%= image_tag "logo3.png" %>
-      <p class="font-poppins text-base text-center font-bold">DAPATKAN SARAN TERBAIK UNTUK MENCEGAH STUNTING</p>
+      <p class="font-poppins text-base text-center font-bold lg:text-2xl">DAPATKAN SARAN TERBAIK UNTUK MENCEGAH
+        STUNTING</p>
     </div>
 
     <div class="onViewAnimate animate-in slide-in-from-left-14 fade-in-0 duration-2s ease-in-out mt-16 mb-24">
       <%= image_tag "logo4.png" %>
-      <p class="font-poppins text-base text-center font-bold">SCAN FOTO UNTUK MENEMUKAN INFO GIZI MAKANAN</p>
+      <p class="font-poppins text-base text-center font-bold lg:text-2xl">SCAN FOTO UNTUK MENEMUKAN INFO GIZI
+        MAKANAN</p>
     </div>
 
     <div class="onViewAnimate animate-in slide-in-from-right-14 fade-in-0 duration-2s ease-in-out mt-16 mb-24">
       <%= image_tag "logo5.png" %>
-      <p class="font-poppins text-base text-center font-bold">AYO MULAI UNTUK MENUJU INDONESIA EMAS</p>
+      <p class="font-poppins text-base text-center font-bold lg:text-2xl">AYO MULAI UNTUK MENUJU INDONESIA EMAS</p>
     </div>
 
+  </div>
+
+  <div class="flex flex-col gap-4 rounded-xl bg-mainColor1 p-4 text-white onViewAnimate animate-in slide-in-from-left-14 fade-in-0 duration-2s ease-in-out mt-16 mb-24 ">
+    <h1 class="text-2xl font-bold underline text-center">About Us</h1>
+    <p class="font-poppins text-lg text-center">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias aperiam architecto asperiores at cum, cumque
+      dolores explicabo ipsum iure magnam minima nobis non odio perferendis saepe sit suscipit vel?
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet beatae consequatur cum deserunt,
+      excepturi, magnam officiis quae sit unde voluptatem voluptatum! Alias blanditiis corporis deleniti exercitationem,
+      magni molestiae voluptatem?
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi enim exercitationem id impedit labore magnam nam
+      perspiciatis quo sunt voluptates. Ab illo iusto odio. Corporis explicabo fuga minima rerum ullam?
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dignissimos dolor doloribus eos fugiat iure pariatur!
+      Architecto deleniti ea enim, eos facilis ipsam pariatur, praesentium rem sit, tempora veritatis vitae?
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae dolorem eos, incidunt modi nisi optio
+      praesentium quo repellat voluptatibus. Atque autem, deleniti eaque eveniet laudantium nobis rem sint vero!
+    </p>
   </div>
 
   <div class="onViewAnimate animate-in slide-in-from-bottom-14 fade-in-0 duration-2s ease-in-out mt-16 mb-24">
     <div class="flex justify-center items-center">
-      <%= link_to "Mulai Perjalanan Anda", new_session_path, class: "font-poppins p-4 text-center text-white bg-mainColor2 rounded-xl w-72" %>
+      <%= link_to "Mulai Perjalanan Anda", new_session_path, class: "font-poppins p-4 text-center text-white bg-mainColor2 rounded-xl w-72 transition-all hover:bg-mainColor1" %>
     </div>
   </div>
+
+
 </section>
