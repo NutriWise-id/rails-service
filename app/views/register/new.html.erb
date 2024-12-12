@@ -10,7 +10,7 @@
 
     <h1 class="text-center font-bold text-4xl">Register</h1>
 
-    <%= form_with model: @user, url: register_index_path, class: "contents" do |form| %>
+    <%= form_with url: register_index_path, class: "contents" do |form| %>
       <div class="my-5">
         <%= form.text_field :name, required: true, autofocus: true, autocomplete: "username", placeholder: "Enter your name", value: params[:name], class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
       </div>

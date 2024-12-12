@@ -95,8 +95,7 @@ jobs:
         run: npm ci
 
       - name: Build Tailwind CSS
-        run: npx tailwindcss -i ./input.css -o ./output.css --minify
-
+        run: npx tailwindcss -i app/assets/stylesheets/application.tailwind.css -o app/assets/stylesheets/application.tailwind.build.css --minify
 
       - name: Run tests
         env:
